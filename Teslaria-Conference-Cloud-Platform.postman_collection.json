@@ -1,0 +1,1279 @@
+{
+	"info": {
+		"_postman_id": "1c1ff12e-5dd2-4575-90f9-835be9f20a02",
+		"name": "Teslaria-Conference-Cloud-Platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Conference Booking System",
+			"item": [
+				{
+					"name": "Get All Booking List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/reservations?type=issue",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"reservations"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "issue"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "System Management",
+			"item": [
+				{
+					"name": "Get Organization",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/organization_nodes",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"organization_nodes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Organization Node",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"children\": [],\r\n    \"id\": \"78ba49be-20ae-4f51-bc4c-97f8651552cf\",\r\n    \"name\": \"总经办123\",\r\n    \"parentId\": \"18086524-9edc-4c3a-ab9a-81b092c53ab1\",\r\n    \"userIds\": [],\r\n    \"userNames\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_ip}}/iot/organization_nodes",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"organization_nodes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Organization",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"children\": [],\r\n    \"id\": \"\",\r\n    \"name\": \"总经办123\",\r\n    \"parentId\": \"18086524-9edc-4c3a-ab9a-81b092c53ab1\",\r\n    \"userIds\": [],\r\n    \"userNames\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_ip}}/iot/organization_nodes",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"organization_nodes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 08:04:44 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 08:04:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"1beeda76-c188-4d3e-a998-fd59285ba8b9\",\n    \"name\": \"总经办123\",\n    \"children\": [],\n    \"userIds\": [],\n    \"userNames\": [],\n    \"parentId\": \"18086524-9edc-4c3a-ab9a-81b092c53ab1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Organization Node",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/organization_nodes/e8d945db-21d4-4a0d-8709-697791a843f9",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"organization_nodes",
+								"e8d945db-21d4-4a0d-8709-697791a843f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/users",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_ip}}/iot/users",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 07:31:15 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 07:31:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"0fb5ebb1-07c1-44f4-a306-72105b4f89e7\",\n        \"name\": \"航天星桥\",\n        \"password\": \"26a4cd20d35fd4abca94acf8a0080f82\",\n        \"phone\": \"htxq\",\n        \"email\": \"htxq\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1607593140495,\n        \"lastUpdateAt\": 1607593140495,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"8dbcaf89-788b-4b68-9b24-1cc370396dc0\",\n        \"organizationName\": \"市场总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\",\n            \"reservation:initApproval:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"1d7e4f8e-2cf6-4bb5-ac49-83eecee679a5\",\n        \"name\": \"1234\",\n        \"password\": \"255358ea0a1d7c69d652e1cd1f9c3021\",\n        \"phone\": \"12313\",\n        \"email\": \"121\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594622658961,\n        \"lastUpdateAt\": 1594622658961,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"2c691168-6c76-4ff7-a7aa-c8ce757c7577\",\n        \"name\": \"张耀宗\",\n        \"password\": \"36215b3d27a483443d3ef995b4dc2f04\",\n        \"phone\": \"123\",\n        \"email\": \"123\",\n        \"faceImage\": \"/static/0165208b-63e9-472e-b097-5bdfea751f53.jpg\",\n        \"admin\": false,\n        \"createAt\": 1594602958079,\n        \"lastUpdateAt\": 1594602958079,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:initApproval:*\",\n            \"reservation:issue:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"464cae07-0483-48cd-90b2-ad2bd0c807a2\",\n        \"name\": \"李爽\",\n        \"password\": \"56c7f0f8454b3d6e2ee85d0487dce121\",\n        \"phone\": \"lishuang\",\n        \"email\": \"lishuang\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594603027500,\n        \"lastUpdateAt\": 1594603027500,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\"\n        ]\n    },\n    {\n        \"id\": \"9ec37f4f-b7b8-4bbb-8d5e-054ea7c6c7cb\",\n        \"name\": \"test1\",\n        \"password\": \"6fd415f7a314912afabb3fc47c7ea40e\",\n        \"phone\": \"test2\",\n        \"email\": \"test1\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1600737656415,\n        \"lastUpdateAt\": 1600737656415,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"03c18a77-09f4-4e90-90d3-00c17712daa5\",\n        \"organizationName\": \"出纳\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"a0277b99-89d2-4034-a8fe-806d8c480d4e\",\n        \"name\": \"管理员\",\n        \"password\": \"f0701a7dc0abbc6a028ab89ed2c603e9\",\n        \"phone\": \"121212\",\n        \"email\": \"12121212\",\n        \"faceImage\": null,\n        \"admin\": true,\n        \"createAt\": 1596026111974,\n        \"lastUpdateAt\": 1596026111974,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"ce9ad5bd-3a04-4a66-85e4-3c91b01b3f71\",\n        \"name\": \"zcq\",\n        \"password\": \"42d21d00fa13425169a4c1938330a343\",\n        \"phone\": \"zcq\",\n        \"email\": \"zcq\",\n        \"faceImage\": \"/static/79a979ee-352f-4e18-8299-3e121200314a.jpg\",\n        \"admin\": false,\n        \"createAt\": 1596019125831,\n        \"lastUpdateAt\": 1596019125831,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"792e8a12-bd02-4dd4-abde-c63c45b3b084\",\n        \"organizationName\": \"测试专员\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\"\n        ]\n    },\n    {\n        \"id\": \"cf972556-6a49-4470-a462-894850af6185\",\n        \"name\": \"test\",\n        \"password\": \"1f5b83e511cb4bc0a40ef05b8cf9470b\",\n        \"phone\": \"test\",\n        \"email\": \"test\",\n        \"faceImage\": null,\n        \"admin\": true,\n        \"createAt\": 1594648869781,\n        \"lastUpdateAt\": 1594648869781,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"8dbcaf89-788b-4b68-9b24-1cc370396dc0\",\n        \"organizationName\": \"市场总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\",\n            \"reservation:initApproval:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"d5ae1420-5cd1-4884-8459-9239cc35e320\",\n        \"name\": \"张本刚\",\n        \"password\": \"5422fef27b9eca1ecc6b9e76123ac7fd\",\n        \"phone\": \"zhangbengang\",\n        \"email\": \"zhangbengang\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594603007765,\n        \"lastUpdateAt\": 1594603007765,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"b85ba2b1-d73d-4a47-8088-68a2fba7697d\",\n        \"organizationName\": \"技术经理\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\"\n        ]\n    },\n    {\n        \"id\": \"ec1ab8e1-2d61-4670-bc8f-4b2fa492b3f4\",\n        \"name\": \"hjc\",\n        \"password\": \"9b54977c96fa067aca60256e133e01d3\",\n        \"phone\": \"123222\",\n        \"email\": \"hjc\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1596018684214,\n        \"lastUpdateAt\": 1596018684214,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\",\n            \"reservation:initApproval:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"eeb311a9-1c18-4dbd-907d-91b78ecaceb4\",\n        \"name\": \"screen\",\n        \"password\": \"c708770782ddc209b84f52a9eda52641\",\n        \"phone\": \"screen\",\n        \"email\": \"screen\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594622504792,\n        \"lastUpdateAt\": 1594622504792,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"f6ebadb9-aec1-4f93-a6ec-ac060c649075\",\n        \"name\": \"翟春泉\",\n        \"password\": \"4c9fa003d9c0e71fb9c875b118d07940\",\n        \"phone\": \"zhaichunquan\",\n        \"email\": \"zhaichunquan\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594602984070,\n        \"lastUpdateAt\": 1594602984070,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"f7cdecc8-4b86-4dfd-9389-ebf4e8da446b\",\n        \"name\": \"admin\",\n        \"password\": \"b3a56c696396a03d4b20da429a451e04\",\n        \"phone\": \"admin\",\n        \"email\": \"admin\",\n        \"faceImage\": null,\n        \"admin\": true,\n        \"createAt\": 1594111770438,\n        \"lastUpdateAt\": 1594111770438,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\", \r\n    \"password\": \"admin\", \r\n    \"phone\": \"12345678912\", \r\n    \"email\": \"test@test.com\", \r\n    \"admin\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_ip}}/iot/users",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_ip}}/iot/users",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 07:31:15 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 07:31:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"0fb5ebb1-07c1-44f4-a306-72105b4f89e7\",\n        \"name\": \"航天星桥\",\n        \"password\": \"26a4cd20d35fd4abca94acf8a0080f82\",\n        \"phone\": \"htxq\",\n        \"email\": \"htxq\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1607593140495,\n        \"lastUpdateAt\": 1607593140495,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"8dbcaf89-788b-4b68-9b24-1cc370396dc0\",\n        \"organizationName\": \"市场总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\",\n            \"reservation:initApproval:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"1d7e4f8e-2cf6-4bb5-ac49-83eecee679a5\",\n        \"name\": \"1234\",\n        \"password\": \"255358ea0a1d7c69d652e1cd1f9c3021\",\n        \"phone\": \"12313\",\n        \"email\": \"121\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594622658961,\n        \"lastUpdateAt\": 1594622658961,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"2c691168-6c76-4ff7-a7aa-c8ce757c7577\",\n        \"name\": \"张耀宗\",\n        \"password\": \"36215b3d27a483443d3ef995b4dc2f04\",\n        \"phone\": \"123\",\n        \"email\": \"123\",\n        \"faceImage\": \"/static/0165208b-63e9-472e-b097-5bdfea751f53.jpg\",\n        \"admin\": false,\n        \"createAt\": 1594602958079,\n        \"lastUpdateAt\": 1594602958079,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:initApproval:*\",\n            \"reservation:issue:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"464cae07-0483-48cd-90b2-ad2bd0c807a2\",\n        \"name\": \"李爽\",\n        \"password\": \"56c7f0f8454b3d6e2ee85d0487dce121\",\n        \"phone\": \"lishuang\",\n        \"email\": \"lishuang\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594603027500,\n        \"lastUpdateAt\": 1594603027500,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\"\n        ]\n    },\n    {\n        \"id\": \"9ec37f4f-b7b8-4bbb-8d5e-054ea7c6c7cb\",\n        \"name\": \"test1\",\n        \"password\": \"6fd415f7a314912afabb3fc47c7ea40e\",\n        \"phone\": \"test2\",\n        \"email\": \"test1\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1600737656415,\n        \"lastUpdateAt\": 1600737656415,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"03c18a77-09f4-4e90-90d3-00c17712daa5\",\n        \"organizationName\": \"出纳\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"a0277b99-89d2-4034-a8fe-806d8c480d4e\",\n        \"name\": \"管理员\",\n        \"password\": \"f0701a7dc0abbc6a028ab89ed2c603e9\",\n        \"phone\": \"121212\",\n        \"email\": \"12121212\",\n        \"faceImage\": null,\n        \"admin\": true,\n        \"createAt\": 1596026111974,\n        \"lastUpdateAt\": 1596026111974,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"ce9ad5bd-3a04-4a66-85e4-3c91b01b3f71\",\n        \"name\": \"zcq\",\n        \"password\": \"42d21d00fa13425169a4c1938330a343\",\n        \"phone\": \"zcq\",\n        \"email\": \"zcq\",\n        \"faceImage\": \"/static/79a979ee-352f-4e18-8299-3e121200314a.jpg\",\n        \"admin\": false,\n        \"createAt\": 1596019125831,\n        \"lastUpdateAt\": 1596019125831,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"792e8a12-bd02-4dd4-abde-c63c45b3b084\",\n        \"organizationName\": \"测试专员\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\"\n        ]\n    },\n    {\n        \"id\": \"cf972556-6a49-4470-a462-894850af6185\",\n        \"name\": \"test\",\n        \"password\": \"1f5b83e511cb4bc0a40ef05b8cf9470b\",\n        \"phone\": \"test\",\n        \"email\": \"test\",\n        \"faceImage\": null,\n        \"admin\": true,\n        \"createAt\": 1594648869781,\n        \"lastUpdateAt\": 1594648869781,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"8dbcaf89-788b-4b68-9b24-1cc370396dc0\",\n        \"organizationName\": \"市场总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\",\n            \"reservation:initApproval:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"d5ae1420-5cd1-4884-8459-9239cc35e320\",\n        \"name\": \"张本刚\",\n        \"password\": \"5422fef27b9eca1ecc6b9e76123ac7fd\",\n        \"phone\": \"zhangbengang\",\n        \"email\": \"zhangbengang\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594603007765,\n        \"lastUpdateAt\": 1594603007765,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"b85ba2b1-d73d-4a47-8088-68a2fba7697d\",\n        \"organizationName\": \"技术经理\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\"\n        ]\n    },\n    {\n        \"id\": \"ec1ab8e1-2d61-4670-bc8f-4b2fa492b3f4\",\n        \"name\": \"hjc\",\n        \"password\": \"9b54977c96fa067aca60256e133e01d3\",\n        \"phone\": \"123222\",\n        \"email\": \"hjc\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1596018684214,\n        \"lastUpdateAt\": 1596018684214,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\",\n            \"reservation:initApproval:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"eeb311a9-1c18-4dbd-907d-91b78ecaceb4\",\n        \"name\": \"screen\",\n        \"password\": \"c708770782ddc209b84f52a9eda52641\",\n        \"phone\": \"screen\",\n        \"email\": \"screen\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594622504792,\n        \"lastUpdateAt\": 1594622504792,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"f6ebadb9-aec1-4f93-a6ec-ac060c649075\",\n        \"name\": \"翟春泉\",\n        \"password\": \"4c9fa003d9c0e71fb9c875b118d07940\",\n        \"phone\": \"zhaichunquan\",\n        \"email\": \"zhaichunquan\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594602984070,\n        \"lastUpdateAt\": 1594602984070,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"f7cdecc8-4b86-4dfd-9389-ebf4e8da446b\",\n        \"name\": \"admin\",\n        \"password\": \"b3a56c696396a03d4b20da429a451e04\",\n        \"phone\": \"admin\",\n        \"email\": \"admin\",\n        \"faceImage\": null,\n        \"admin\": true,\n        \"createAt\": 1594111770438,\n        \"lastUpdateAt\": 1594111770438,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/users/1d7e4f8e-2cf6-4bb5-ac49-83eecee679a5",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"users",
+								"1d7e4f8e-2cf6-4bb5-ac49-83eecee679a5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_ip}}/iot/users",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 07:31:15 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 07:31:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"0fb5ebb1-07c1-44f4-a306-72105b4f89e7\",\n        \"name\": \"航天星桥\",\n        \"password\": \"26a4cd20d35fd4abca94acf8a0080f82\",\n        \"phone\": \"htxq\",\n        \"email\": \"htxq\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1607593140495,\n        \"lastUpdateAt\": 1607593140495,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"8dbcaf89-788b-4b68-9b24-1cc370396dc0\",\n        \"organizationName\": \"市场总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\",\n            \"reservation:initApproval:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"1d7e4f8e-2cf6-4bb5-ac49-83eecee679a5\",\n        \"name\": \"1234\",\n        \"password\": \"255358ea0a1d7c69d652e1cd1f9c3021\",\n        \"phone\": \"12313\",\n        \"email\": \"121\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594622658961,\n        \"lastUpdateAt\": 1594622658961,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"2c691168-6c76-4ff7-a7aa-c8ce757c7577\",\n        \"name\": \"张耀宗\",\n        \"password\": \"36215b3d27a483443d3ef995b4dc2f04\",\n        \"phone\": \"123\",\n        \"email\": \"123\",\n        \"faceImage\": \"/static/0165208b-63e9-472e-b097-5bdfea751f53.jpg\",\n        \"admin\": false,\n        \"createAt\": 1594602958079,\n        \"lastUpdateAt\": 1594602958079,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:initApproval:*\",\n            \"reservation:issue:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"464cae07-0483-48cd-90b2-ad2bd0c807a2\",\n        \"name\": \"李爽\",\n        \"password\": \"56c7f0f8454b3d6e2ee85d0487dce121\",\n        \"phone\": \"lishuang\",\n        \"email\": \"lishuang\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594603027500,\n        \"lastUpdateAt\": 1594603027500,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\"\n        ]\n    },\n    {\n        \"id\": \"9ec37f4f-b7b8-4bbb-8d5e-054ea7c6c7cb\",\n        \"name\": \"test1\",\n        \"password\": \"6fd415f7a314912afabb3fc47c7ea40e\",\n        \"phone\": \"test2\",\n        \"email\": \"test1\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1600737656415,\n        \"lastUpdateAt\": 1600737656415,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"03c18a77-09f4-4e90-90d3-00c17712daa5\",\n        \"organizationName\": \"出纳\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"a0277b99-89d2-4034-a8fe-806d8c480d4e\",\n        \"name\": \"管理员\",\n        \"password\": \"f0701a7dc0abbc6a028ab89ed2c603e9\",\n        \"phone\": \"121212\",\n        \"email\": \"12121212\",\n        \"faceImage\": null,\n        \"admin\": true,\n        \"createAt\": 1596026111974,\n        \"lastUpdateAt\": 1596026111974,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"ce9ad5bd-3a04-4a66-85e4-3c91b01b3f71\",\n        \"name\": \"zcq\",\n        \"password\": \"42d21d00fa13425169a4c1938330a343\",\n        \"phone\": \"zcq\",\n        \"email\": \"zcq\",\n        \"faceImage\": \"/static/79a979ee-352f-4e18-8299-3e121200314a.jpg\",\n        \"admin\": false,\n        \"createAt\": 1596019125831,\n        \"lastUpdateAt\": 1596019125831,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"792e8a12-bd02-4dd4-abde-c63c45b3b084\",\n        \"organizationName\": \"测试专员\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\"\n        ]\n    },\n    {\n        \"id\": \"cf972556-6a49-4470-a462-894850af6185\",\n        \"name\": \"test\",\n        \"password\": \"1f5b83e511cb4bc0a40ef05b8cf9470b\",\n        \"phone\": \"test\",\n        \"email\": \"test\",\n        \"faceImage\": null,\n        \"admin\": true,\n        \"createAt\": 1594648869781,\n        \"lastUpdateAt\": 1594648869781,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"8dbcaf89-788b-4b68-9b24-1cc370396dc0\",\n        \"organizationName\": \"市场总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\",\n            \"reservation:initApproval:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"d5ae1420-5cd1-4884-8459-9239cc35e320\",\n        \"name\": \"张本刚\",\n        \"password\": \"5422fef27b9eca1ecc6b9e76123ac7fd\",\n        \"phone\": \"zhangbengang\",\n        \"email\": \"zhangbengang\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594603007765,\n        \"lastUpdateAt\": 1594603007765,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"b85ba2b1-d73d-4a47-8088-68a2fba7697d\",\n        \"organizationName\": \"技术经理\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\"\n        ]\n    },\n    {\n        \"id\": \"ec1ab8e1-2d61-4670-bc8f-4b2fa492b3f4\",\n        \"name\": \"hjc\",\n        \"password\": \"9b54977c96fa067aca60256e133e01d3\",\n        \"phone\": \"123222\",\n        \"email\": \"hjc\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1596018684214,\n        \"lastUpdateAt\": 1596018684214,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": [\n            \"reservation:issue:*\",\n            \"reservation:initApproval:*\",\n            \"reservation:lastApproval:*\"\n        ]\n    },\n    {\n        \"id\": \"eeb311a9-1c18-4dbd-907d-91b78ecaceb4\",\n        \"name\": \"screen\",\n        \"password\": \"c708770782ddc209b84f52a9eda52641\",\n        \"phone\": \"screen\",\n        \"email\": \"screen\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594622504792,\n        \"lastUpdateAt\": 1594622504792,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": null,\n        \"organizationName\": null,\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"f6ebadb9-aec1-4f93-a6ec-ac060c649075\",\n        \"name\": \"翟春泉\",\n        \"password\": \"4c9fa003d9c0e71fb9c875b118d07940\",\n        \"phone\": \"zhaichunquan\",\n        \"email\": \"zhaichunquan\",\n        \"faceImage\": null,\n        \"admin\": false,\n        \"createAt\": 1594602984070,\n        \"lastUpdateAt\": 1594602984070,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    },\n    {\n        \"id\": \"f7cdecc8-4b86-4dfd-9389-ebf4e8da446b\",\n        \"name\": \"admin\",\n        \"password\": \"b3a56c696396a03d4b20da429a451e04\",\n        \"phone\": \"admin\",\n        \"email\": \"admin\",\n        \"faceImage\": null,\n        \"admin\": true,\n        \"createAt\": 1594111770438,\n        \"lastUpdateAt\": 1594111770438,\n        \"roleIds\": [],\n        \"roleNames\": [],\n        \"organizationId\": \"c2e02864-53a4-4767-8918-73008e2fc0b9\",\n        \"organizationName\": \"技术总监\",\n        \"userGroupIds\": [],\n        \"userGroupNames\": [],\n        \"permissions\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Role List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/roles",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"roles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Role List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_ip}}/iot/roles",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"roles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 07:30:12 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "JSESSIONID=node09bh3mww6di8nsu69tz594xqp2956586.node0;Path=/iot"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 07:30:12 GMT"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"5181ecff-3c03-41d4-8d32-60bd78218004\",\n        \"name\": \"管理员\",\n        \"permissions\": [],\n        \"createAt\": 1609137071067,\n        \"lastUpdateAt\": 1609137071067\n    },\n    {\n        \"id\": \"54483c23-62cb-41c0-9c19-f7a645294ed6\",\n        \"name\": \"系统管理员\",\n        \"permissions\": [],\n        \"createAt\": 1594622903971,\n        \"lastUpdateAt\": 1594622903971\n    },\n    {\n        \"id\": \"c2f5012f-9ea8-4f77-8dab-1e0bbeb10184\",\n        \"name\": \"issure\",\n        \"permissions\": [],\n        \"createAt\": 1594622860279,\n        \"lastUpdateAt\": 1594622860279\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add/Edit Role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_ip}}/iot/roles",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"roles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add/Edit Role",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_ip}}/iot/roles",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"roles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 08:19:27 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 08:19:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"55306968-8cc2-4acf-9553-2290a90a7a0e\",\n    \"name\": \"test\",\n    \"permissions\": [],\n    \"createAt\": 1610525967053,\n    \"lastUpdateAt\": 1610525967053\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/roles/55306968-8cc2-4acf-9553-2290a90a7a0e",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"roles",
+								"55306968-8cc2-4acf-9553-2290a90a7a0e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Role List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_ip}}/iot/roles",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"roles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 07:30:12 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "JSESSIONID=node09bh3mww6di8nsu69tz594xqp2956586.node0;Path=/iot"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 07:30:12 GMT"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"5181ecff-3c03-41d4-8d32-60bd78218004\",\n        \"name\": \"管理员\",\n        \"permissions\": [],\n        \"createAt\": 1609137071067,\n        \"lastUpdateAt\": 1609137071067\n    },\n    {\n        \"id\": \"54483c23-62cb-41c0-9c19-f7a645294ed6\",\n        \"name\": \"系统管理员\",\n        \"permissions\": [],\n        \"createAt\": 1594622903971,\n        \"lastUpdateAt\": 1594622903971\n    },\n    {\n        \"id\": \"c2f5012f-9ea8-4f77-8dab-1e0bbeb10184\",\n        \"name\": \"issure\",\n        \"permissions\": [],\n        \"createAt\": 1594622860279,\n        \"lastUpdateAt\": 1594622860279\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Building List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/building_nodes",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"building_nodes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Building List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_ip}}/iot/building_nodes",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"building_nodes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 07:33:45 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 07:33:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n        \"name\": \"Root\",\n        \"hostUrl\": null,\n        \"hostToken\": null,\n        \"hostId\": null,\n        \"hostName\": null,\n        \"hostRoomId\": null,\n        \"hostRoomName\": null,\n        \"room\": false,\n        \"parentId\": null,\n        \"children\": [\n            {\n                \"id\": \"3625c0f7-6e03-40f0-9169-ec9594245d15\",\n                \"name\": \"山东省\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"5a8bb97d-e078-4be8-9583-440396d3a0fe\",\n                        \"name\": \"济南市\",\n                        \"hostUrl\": \"http://120.77.155.37:10020/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyMTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.1cD6eXCbHOPuVe4s4i-blpCbQzT5x7W3HJdv9UrBBIo\",\n                        \"hostId\": \"81d64f0f-b08c-454a-b93f-0701dbca01c9\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"24648fcb-4cd0-412e-a698-1754b617bdd4\",\n                        \"hostRoomName\": \"琪琪\",\n                        \"room\": false,\n                        \"parentId\": \"3625c0f7-6e03-40f0-9169-ec9594245d15\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"3a27548b-f2b2-4e3a-822c-dce82683bdcd\",\n                \"name\": \"天津\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"45280c95-0f5a-4d25-a505-dddb8ef5d09d\",\n                        \"name\": \"办公区\",\n                        \"hostUrl\": \"http://120.77.155.37:10012/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzQ3MjUzNTgsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.8nHCleO0S8NuE9-LuYlcwUmAoM_KUrTePKiZ-xJN_34\",\n                        \"hostId\": \"145d19bd-796e-4b37-9f8a-4dcd5322b639\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"f50134fe-c323-4cb9-8549-4d757ae3f0c8\",\n                        \"hostRoomName\": \"房间-1\",\n                        \"room\": false,\n                        \"parentId\": \"3a27548b-f2b2-4e3a-822c-dce82683bdcd\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"56a1ec35-0ccf-41da-a923-862f983c169e\",\n                \"name\": \"北京\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                \"name\": \"广州\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"413b7cd7-8b55-4443-aa2a-dced464fb71c\",\n                        \"name\": \"dongguan\",\n                        \"hostUrl\": null,\n                        \"hostToken\": null,\n                        \"hostId\": null,\n                        \"hostName\": null,\n                        \"hostRoomId\": null,\n                        \"hostRoomName\": null,\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"5d1bacf8-c4ab-4f1d-b31b-ef4aaccea4f0\",\n                        \"name\": \"培训室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"f8e7e065-187f-4ec5-aec1-85ae8b67baab\",\n                        \"hostRoomName\": \"培训室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"6c1744cf-867f-457f-9ff2-bbc10f88b831\",\n                        \"name\": \"总经理办公室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"1a487f90-a07c-43e4-bfec-c1a432039aa6\",\n                        \"hostRoomName\": \"总经理室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"70a09726-3c0a-4cdd-be8d-183da654e8d6\",\n                        \"name\": \"会议室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"8d9684ad-10bc-45e1-abc1-d302b226f331\",\n                        \"hostRoomName\": \"会议室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"f1eba75a-edf4-4bd0-965d-1ae3ae60b21a\",\n                        \"name\": \"公共区域\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"a10e4839-1cf7-4339-af6d-a2fd499866f4\",\n                        \"hostRoomName\": \"公共区域\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            }\n        ],\n        \"deviceIds\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add Building",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"1号楼\", \r\n    \"parentId\": \"56a1ec35-0ccf-41da-a923-862f983c169e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_ip}}/iot/building_nodes",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"building_nodes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Building List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_ip}}/iot/building_nodes",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"building_nodes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 07:33:45 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 07:33:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n        \"name\": \"Root\",\n        \"hostUrl\": null,\n        \"hostToken\": null,\n        \"hostId\": null,\n        \"hostName\": null,\n        \"hostRoomId\": null,\n        \"hostRoomName\": null,\n        \"room\": false,\n        \"parentId\": null,\n        \"children\": [\n            {\n                \"id\": \"3625c0f7-6e03-40f0-9169-ec9594245d15\",\n                \"name\": \"山东省\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"5a8bb97d-e078-4be8-9583-440396d3a0fe\",\n                        \"name\": \"济南市\",\n                        \"hostUrl\": \"http://120.77.155.37:10020/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyMTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.1cD6eXCbHOPuVe4s4i-blpCbQzT5x7W3HJdv9UrBBIo\",\n                        \"hostId\": \"81d64f0f-b08c-454a-b93f-0701dbca01c9\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"24648fcb-4cd0-412e-a698-1754b617bdd4\",\n                        \"hostRoomName\": \"琪琪\",\n                        \"room\": false,\n                        \"parentId\": \"3625c0f7-6e03-40f0-9169-ec9594245d15\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"3a27548b-f2b2-4e3a-822c-dce82683bdcd\",\n                \"name\": \"天津\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"45280c95-0f5a-4d25-a505-dddb8ef5d09d\",\n                        \"name\": \"办公区\",\n                        \"hostUrl\": \"http://120.77.155.37:10012/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzQ3MjUzNTgsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.8nHCleO0S8NuE9-LuYlcwUmAoM_KUrTePKiZ-xJN_34\",\n                        \"hostId\": \"145d19bd-796e-4b37-9f8a-4dcd5322b639\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"f50134fe-c323-4cb9-8549-4d757ae3f0c8\",\n                        \"hostRoomName\": \"房间-1\",\n                        \"room\": false,\n                        \"parentId\": \"3a27548b-f2b2-4e3a-822c-dce82683bdcd\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"56a1ec35-0ccf-41da-a923-862f983c169e\",\n                \"name\": \"北京\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                \"name\": \"广州\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"413b7cd7-8b55-4443-aa2a-dced464fb71c\",\n                        \"name\": \"dongguan\",\n                        \"hostUrl\": null,\n                        \"hostToken\": null,\n                        \"hostId\": null,\n                        \"hostName\": null,\n                        \"hostRoomId\": null,\n                        \"hostRoomName\": null,\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"5d1bacf8-c4ab-4f1d-b31b-ef4aaccea4f0\",\n                        \"name\": \"培训室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"f8e7e065-187f-4ec5-aec1-85ae8b67baab\",\n                        \"hostRoomName\": \"培训室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"6c1744cf-867f-457f-9ff2-bbc10f88b831\",\n                        \"name\": \"总经理办公室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"1a487f90-a07c-43e4-bfec-c1a432039aa6\",\n                        \"hostRoomName\": \"总经理室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"70a09726-3c0a-4cdd-be8d-183da654e8d6\",\n                        \"name\": \"会议室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"8d9684ad-10bc-45e1-abc1-d302b226f331\",\n                        \"hostRoomName\": \"会议室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"f1eba75a-edf4-4bd0-965d-1ae3ae60b21a\",\n                        \"name\": \"公共区域\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"a10e4839-1cf7-4339-af6d-a2fd499866f4\",\n                        \"hostRoomName\": \"公共区域\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            }\n        ],\n        \"deviceIds\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete Building",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"1号楼\", \r\n    \"parentId\": \"56a1ec35-0ccf-41da-a923-862f983c169e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_ip}}/iot/building_nodes/77bb3a93-5827-4281-a59f-dbaa1a1740e3",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"building_nodes",
+								"77bb3a93-5827-4281-a59f-dbaa1a1740e3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Building List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_ip}}/iot/building_nodes",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"building_nodes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 07:33:45 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 07:33:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n        \"name\": \"Root\",\n        \"hostUrl\": null,\n        \"hostToken\": null,\n        \"hostId\": null,\n        \"hostName\": null,\n        \"hostRoomId\": null,\n        \"hostRoomName\": null,\n        \"room\": false,\n        \"parentId\": null,\n        \"children\": [\n            {\n                \"id\": \"3625c0f7-6e03-40f0-9169-ec9594245d15\",\n                \"name\": \"山东省\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"5a8bb97d-e078-4be8-9583-440396d3a0fe\",\n                        \"name\": \"济南市\",\n                        \"hostUrl\": \"http://120.77.155.37:10020/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyMTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.1cD6eXCbHOPuVe4s4i-blpCbQzT5x7W3HJdv9UrBBIo\",\n                        \"hostId\": \"81d64f0f-b08c-454a-b93f-0701dbca01c9\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"24648fcb-4cd0-412e-a698-1754b617bdd4\",\n                        \"hostRoomName\": \"琪琪\",\n                        \"room\": false,\n                        \"parentId\": \"3625c0f7-6e03-40f0-9169-ec9594245d15\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"3a27548b-f2b2-4e3a-822c-dce82683bdcd\",\n                \"name\": \"天津\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"45280c95-0f5a-4d25-a505-dddb8ef5d09d\",\n                        \"name\": \"办公区\",\n                        \"hostUrl\": \"http://120.77.155.37:10012/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzQ3MjUzNTgsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.8nHCleO0S8NuE9-LuYlcwUmAoM_KUrTePKiZ-xJN_34\",\n                        \"hostId\": \"145d19bd-796e-4b37-9f8a-4dcd5322b639\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"f50134fe-c323-4cb9-8549-4d757ae3f0c8\",\n                        \"hostRoomName\": \"房间-1\",\n                        \"room\": false,\n                        \"parentId\": \"3a27548b-f2b2-4e3a-822c-dce82683bdcd\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"56a1ec35-0ccf-41da-a923-862f983c169e\",\n                \"name\": \"北京\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                \"name\": \"广州\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"413b7cd7-8b55-4443-aa2a-dced464fb71c\",\n                        \"name\": \"dongguan\",\n                        \"hostUrl\": null,\n                        \"hostToken\": null,\n                        \"hostId\": null,\n                        \"hostName\": null,\n                        \"hostRoomId\": null,\n                        \"hostRoomName\": null,\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"5d1bacf8-c4ab-4f1d-b31b-ef4aaccea4f0\",\n                        \"name\": \"培训室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"f8e7e065-187f-4ec5-aec1-85ae8b67baab\",\n                        \"hostRoomName\": \"培训室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"6c1744cf-867f-457f-9ff2-bbc10f88b831\",\n                        \"name\": \"总经理办公室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"1a487f90-a07c-43e4-bfec-c1a432039aa6\",\n                        \"hostRoomName\": \"总经理室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"70a09726-3c0a-4cdd-be8d-183da654e8d6\",\n                        \"name\": \"会议室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"8d9684ad-10bc-45e1-abc1-d302b226f331\",\n                        \"hostRoomName\": \"会议室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"f1eba75a-edf4-4bd0-965d-1ae3ae60b21a\",\n                        \"name\": \"公共区域\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"a10e4839-1cf7-4339-af6d-a2fd499866f4\",\n                        \"hostRoomName\": \"公共区域\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            }\n        ],\n        \"deviceIds\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Edit Building",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"北京\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_ip}}/iot/building_nodes/56a1ec35-0ccf-41da-a923-862f983c169e",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"building_nodes",
+								"56a1ec35-0ccf-41da-a923-862f983c169e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Building",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"北京\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_ip}}/iot/building_nodes/56a1ec35-0ccf-41da-a923-862f983c169e",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"building_nodes",
+										"56a1ec35-0ccf-41da-a923-862f983c169e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 08:32:09 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 08:32:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"56a1ec35-0ccf-41da-a923-862f983c169e\",\n    \"name\": \"北京\",\n    \"hostUrl\": null,\n    \"hostToken\": null,\n    \"hostId\": null,\n    \"hostName\": null,\n    \"hostRoomId\": null,\n    \"hostRoomName\": null,\n    \"room\": false,\n    \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n    \"children\": [],\n    \"deviceIds\": []\n}"
+						},
+						{
+							"name": "Get Building List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_ip}}/iot/building_nodes",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"building_nodes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 07:33:45 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 07:33:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n        \"name\": \"Root\",\n        \"hostUrl\": null,\n        \"hostToken\": null,\n        \"hostId\": null,\n        \"hostName\": null,\n        \"hostRoomId\": null,\n        \"hostRoomName\": null,\n        \"room\": false,\n        \"parentId\": null,\n        \"children\": [\n            {\n                \"id\": \"3625c0f7-6e03-40f0-9169-ec9594245d15\",\n                \"name\": \"山东省\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"5a8bb97d-e078-4be8-9583-440396d3a0fe\",\n                        \"name\": \"济南市\",\n                        \"hostUrl\": \"http://120.77.155.37:10020/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyMTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.1cD6eXCbHOPuVe4s4i-blpCbQzT5x7W3HJdv9UrBBIo\",\n                        \"hostId\": \"81d64f0f-b08c-454a-b93f-0701dbca01c9\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"24648fcb-4cd0-412e-a698-1754b617bdd4\",\n                        \"hostRoomName\": \"琪琪\",\n                        \"room\": false,\n                        \"parentId\": \"3625c0f7-6e03-40f0-9169-ec9594245d15\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"3a27548b-f2b2-4e3a-822c-dce82683bdcd\",\n                \"name\": \"天津\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"45280c95-0f5a-4d25-a505-dddb8ef5d09d\",\n                        \"name\": \"办公区\",\n                        \"hostUrl\": \"http://120.77.155.37:10012/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzQ3MjUzNTgsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.8nHCleO0S8NuE9-LuYlcwUmAoM_KUrTePKiZ-xJN_34\",\n                        \"hostId\": \"145d19bd-796e-4b37-9f8a-4dcd5322b639\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"f50134fe-c323-4cb9-8549-4d757ae3f0c8\",\n                        \"hostRoomName\": \"房间-1\",\n                        \"room\": false,\n                        \"parentId\": \"3a27548b-f2b2-4e3a-822c-dce82683bdcd\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"56a1ec35-0ccf-41da-a923-862f983c169e\",\n                \"name\": \"北京\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [],\n                \"deviceIds\": []\n            },\n            {\n                \"id\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                \"name\": \"广州\",\n                \"hostUrl\": null,\n                \"hostToken\": null,\n                \"hostId\": null,\n                \"hostName\": null,\n                \"hostRoomId\": null,\n                \"hostRoomName\": null,\n                \"room\": false,\n                \"parentId\": \"dc5ab659-8a5d-4bf5-a9ff-e243b44db6c7\",\n                \"children\": [\n                    {\n                        \"id\": \"413b7cd7-8b55-4443-aa2a-dced464fb71c\",\n                        \"name\": \"dongguan\",\n                        \"hostUrl\": null,\n                        \"hostToken\": null,\n                        \"hostId\": null,\n                        \"hostName\": null,\n                        \"hostRoomId\": null,\n                        \"hostRoomName\": null,\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"5d1bacf8-c4ab-4f1d-b31b-ef4aaccea4f0\",\n                        \"name\": \"培训室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"f8e7e065-187f-4ec5-aec1-85ae8b67baab\",\n                        \"hostRoomName\": \"培训室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"6c1744cf-867f-457f-9ff2-bbc10f88b831\",\n                        \"name\": \"总经理办公室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"1a487f90-a07c-43e4-bfec-c1a432039aa6\",\n                        \"hostRoomName\": \"总经理室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"70a09726-3c0a-4cdd-be8d-183da654e8d6\",\n                        \"name\": \"会议室\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"8d9684ad-10bc-45e1-abc1-d302b226f331\",\n                        \"hostRoomName\": \"会议室\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    },\n                    {\n                        \"id\": \"f1eba75a-edf4-4bd0-965d-1ae3ae60b21a\",\n                        \"name\": \"公共区域\",\n                        \"hostUrl\": \"http://120.77.155.37:10014/host/\",\n                        \"hostToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjUyNTMsInVzZXJuYW1lIjoidGVzbGFyaWEifQ.wx_tsuFgHfkqbt3HobDyfLDloE3E42XeMog_YjmGglI\",\n                        \"hostId\": \"d5c11474-25dd-4780-97ca-1735c5ac4826\",\n                        \"hostName\": null,\n                        \"hostRoomId\": \"a10e4839-1cf7-4339-af6d-a2fd499866f4\",\n                        \"hostRoomName\": \"公共区域\",\n                        \"room\": false,\n                        \"parentId\": \"d627ad5e-73f9-4f41-aee8-cfdc0d191f3b\",\n                        \"children\": [],\n                        \"deviceIds\": []\n                    }\n                ],\n                \"deviceIds\": []\n            }\n        ],\n        \"deviceIds\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Enterprise Information",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/company",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"company"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Enterprise Information",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_ip}}/iot/company",
+									"host": [
+										"{{server_ip}}"
+									],
+									"path": [
+										"iot",
+										"company"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 13 Jan 2021 07:37:58 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "rememberMe=deleteMe; Path=/iot; Max-Age=0; Expires=Tue, 12-Jan-2021 07:37:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"59436740-eaf8-4748-aba0-303a277ba80a\",\n        \"name\": \"泰思瑞安科技有限公司\",\n        \"description\": \"泰思瑞安科技有限公司\",\n        \"logo\": \"/static/4a9c30e6-298e-4236-9394-a2b22bd89b50.png\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "System Maintenance",
+			"item": [
+				{
+					"name": "Get All Host Tockens",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY1NTEsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.JwhYj1tVQIrRHM4H6oEqQbTvHfMZwLrfMUJmLKFQyNw"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/host_tokens",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"host_tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Host Tockens Enable",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY1NTEsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.JwhYj1tVQIrRHM4H6oEqQbTvHfMZwLrfMUJmLKFQyNw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test\", \r\n    \"token\": \"y5yxn3\", \r\n    \"enable\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_ip}}/iot/host_tokens/1212acb8-bdd8-4159-9a18-2b01afa2bf86",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"host_tokens",
+								"1212acb8-bdd8-4159-9a18-2b01afa2bf86"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Host Tockens Enable Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY1NTEsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.JwhYj1tVQIrRHM4H6oEqQbTvHfMZwLrfMUJmLKFQyNw"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/host_tokens/1212acb8-bdd8-4159-9a18-2b01afa2bf86",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"host_tokens",
+								"1212acb8-bdd8-4159-9a18-2b01afa2bf86"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Device Management",
+			"item": [
+				{
+					"name": "Get All Host",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY1NTEsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.JwhYj1tVQIrRHM4H6oEqQbTvHfMZwLrfMUJmLKFQyNw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_ip}}/iot/hosts/all",
+							"host": [
+								"{{server_ip}}"
+							],
+							"path": [
+								"iot",
+								"hosts",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Host Local Device",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDIwNDY5NjYsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.kLFk2ZFtiG9wxd6zQTEtYfTGXHrG43B5_AydBXpKH3E",
+								"disabled": true
+							},
+							{
+								"key": "Host",
+								"value": "120.77.155.37:10022",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://{{server}}:10024/host/devices",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"port": "10024",
+							"path": [
+								"host",
+								"devices"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"航天星桥\",\r\n    \"password\":\"000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_ip}}/iot/login",
+					"host": [
+						"{{server_ip}}"
+					],
+					"path": [
+						"iot",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

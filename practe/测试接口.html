@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <div id="mainContent"></div>
+  <script>
+    // $.ajax ({
+    //   type : "POST",  
+    //   url: "http://192.168.0.12:10003/host/api/login", 
+    //   dataType:'json',
+    //   contentType: "application/json",
+    //   data: JSON.stringify({"userName": "admin", "password": "0000"}),
+    //   success: function(res) {
+    //     // console.log(res.token)
+    //     // let token = res.token
+    //     // window.localStorage.setItem('token', token)
+    //     localStorage.setItem('token',res.token)
+    //   }
+    // })
+    // var token = localStorage.getItem('token')
+    // $.ajax({  
+    //   // headers:{
+    //   //   'Authorization':"bearer "+token
+    //   // },
+    //   type: "Get",  
+    //   url: "http://192.168.0.12:10003/host/scenes",
+    //   dataType:'json',
+    //   timeout:1000,
+    // }).success(function(res){
+    //     $("#mainContent").html(res);
+    //     console.log($("#mainContent").html(res))
+    //     // localStorage.setItem('details',JSON.stringify(res))
+    //     // console.log("成功")
+    //     // localStorage.setItem('res',res.data)
+    //   })
+    //   .error( function(res) {
+    //     // console.log("失败")
+    //   })
+    // $.ajax ({
+    //   type : "POST", 
+    //   url: "http://192.168.0.12:10003/host/scenes/a738a9ba-38a4-4e68-af71-ce39c53ae2c2/execute", 
+    //   dataType:'json',
+    //   contentType: "application/json",
+    //   headers:{
+    //     'Authorization':"bearer "+token
+    //   }
+    // }).success(function(res){
+    //     console.log("运行成功")
+    //   })
+    //   .error( function(res) {
+    //     console.log("不能重复运行")
+    //   })
+    $.ajax({
+    url: "http://120.77.155.37:18080/iot/building_nodes/5c660cbf-6056-4cae-8684-8f84c695d839/assign_room",
+    type: 'POST',
+    headers:{
+      'Authorization':"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDMxNjk1OTEsInVzZXJuYW1lIjoi6Iiq5aSp5pif5qGlIn0.M913P_GEsRPZPfI6LO-p3e1QWO59r5mC9PcR3d539Jo"
+    },
+    data: JSON.stringify({"hostId": "d5c11474-25dd-4780-97ca-1735c5ac4826","hostRoomId": "a6889dd0-5510-4009-9536-85c9ccb31c24","hostRoomName": "公共区"}),
+    // dataType:'json',
+    contentType: "application/json",
+    }).success(function(res){
+      console.log(res)
+    })
+    .error( function(res) {
+      console.log("不能重复运行")
+    })
+  </script>
+</body>
+</html>

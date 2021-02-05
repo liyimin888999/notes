@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESLARIA</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/jquery-2.1.4/jquery.min.js"></script>
+  <script src="./js/index.js"></script>
+</head>
+<body>
+  <div class="lym-teslaria">
+    <!-- 头部 -->
+    <div class="lym-teslaria-header">
+      <ul class="content">
+        <!-- logo图片 -->
+        <li>
+          <img src="./images/logo.png" alt="LOGO">
+        </li>
+        <li class="button" id="button">
+          <button type="button" id="login">登录</button>
+        </li>
+        <li class="input">
+          密码: <input name="password" type="password" id="password" placeholder="请输入密码">
+        </li>
+        <li class="input">
+          用户名: <input name="userName" type="text" id="userName" placeholder="请输入用户名">
+        </li>
+        <li class="input">
+          IP地址: <input type="text" name="ip" id="ip" placeholder="请输入IP地址" />
+        </li>
+      </ul>
+    </div>
+    <!-- 内容部分 -->
+    <div id="container" class="hidden">
+      <div class="main">
+        <!-- 内容部分下的字体部分 -->
+        <div class="typeface">
+          <p>Equipment management</p>
+        </div>
+        <!-- 内容部分下的会议室部份 -->
+        <div class="meeting" id="meeting">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

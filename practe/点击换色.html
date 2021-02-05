@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="div" onclick="btn(0)">
+<button style="background-color: pink;">按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+</div>
+<div class="div" onclick="btn(1)">
+    <button style="background-color: pink;">按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    </div>
+<div class="div" onclick="btn(2)">
+<button style="background-color: pink;">按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+</div>
+<div class="div" onclick="btn(3)">
+    <button style="background-color: pink;">按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+</div>
+<div class="div" onclick="btn(4)">
+    <button style="background-color: pink;">按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+</div>
+<div class="div" onclick="btn(5)">
+    <button style="background-color: pink;">按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+</div>
+<script>
+    var div = document.getElementsByClassName('div')
+    console.log(div)
+    btn = function (index) {
+        console.log(index)
+        var ul = document.getElementsByClassName('div')[index]
+        var btns =ul.getElementsByTagName('button')
+        console.log(btns)
+        for (var i = 0; i < btns.length; i++) {
+            console.log(btns)
+            btns[i].onclick=function () {
+                console.log(btns)
+                for (var j=0;j<btns.length;++j){
+                    btns[j].style.backgroundColor='';
+                }
+                this.style.backgroundColor='pink';
+            }
+        }
+    }
+    for (var a= 0; a < div.length;a++ ) {
+        btn(a)
+    }
+</script>
+</body>
+</html>

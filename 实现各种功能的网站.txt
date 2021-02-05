@@ -1,0 +1,65 @@
+https://blog.csdn.net/qq_37471721/article/details/102518546
+//React 中使用antd，刷新时被选中的menu初始化的问题
+https://blog.csdn.net/chenqk_123/article/details/99549925
+//项目上线
+https://blog.csdn.net/qq_40014350/article/details/82460563
+//内网穿透
+https://blog.csdn.net/qq_34827048/article/details/78864012
+//路由渲染
+https://blog.csdn.net/weixin_46392334/article/details/107772465
+
+
+                if(item.children) {
+                  return <Submenu
+                    key={item.pathname}
+                    title={item.pathname}
+                  >
+                    {
+                      item.children.map(childItem => <Menu.Item
+                        key={item.pathname}
+                      >
+                        {childItem.title}
+                      </Menu.Item>)
+                    }
+                  </Submenu>
+                } else {
+                  return <Menu.Item key={item.pathname}>{item.title}</Menu.Item>
+                }
+              
+
+
+//轮播图（定时器）
+https://blog.csdn.net/lcszz0302/article/details/110681421?utm_medium=distribute.pc_category.none-task-blog-hot-2.nonecase&depth_1-utm_source=distribute.pc_category.none-task-blog-hot-2.nonecase
+
+https://blog.csdn.net/weixin_50001396/article/details/110749319?utm_medium=distribute.pc_category.none-task-blog-hot-7.nonecase&depth_1-utm_source=distribute.pc_category.none-task-blog-hot-7.nonecase
+
+//echarts新版本的使用
+https://blog.csdn.net/qq_44871797/article/details/110765324?utm_medium=distribute.pc_category.none-task-blog-hot-9.nonecase&depth_1-utm_source=distribute.pc_category.none-task-blog-hot-9.nonecase
+//关于H5页面嵌入视频 (包括: 本地视频, 第三方视频) 的几种方式
+https://blog.csdn.net/kinber_xd/article/details/81631517
+//如何让h5播放流媒体
+https://juejin.cn/post/6844903936797704199
+https://www.cnblogs.com/dreamsqin/p/12557070.html
+https://www.cnblogs.com/wangsongbai/archive/2004/01/13/13444573.html
+//CSS clip-path 生成器
+https://www.html.cn/tool/css-clip-path/
+//点击菜单收起其他的菜单
+https://www.cnblogs.com/522040-m/p/10648700.html
+//实现点击切换颜色，点击另一个恢复原先颜色
+https://blog.csdn.net/wwrzyy/article/details/71631103
+//react➕antd【树形列表，右键出现菜单】
+https://blog.csdn.net/xh_960125/article/details/89850928
+//树形组件右键自定义增删节点与自定义修改前面icon
+https://blog.csdn.net/chi1130/article/details/83387971
+//Html+Javascript+Ajax实现用户登录系统
+https://blog.csdn.net/zhugehengheng/article/details/44645363
+//网络请求状态码大全
+https://www.jianshu.com/p/2560644c8166
+//用jquery如何实现点击一栏目实现栏目变色，再点击另一栏目也变色，但原来的变回原色
+https://bbs.csdn.net/topics/390186289
+//js实现绑定多个按钮并当点击某个按钮时改按钮颜色改变
+https://blog.csdn.net/qq_44378358/article/details/107800161?ops_request_misc=&request_id=&biz_id=102&utm_term=jquery%25E5%25AE%259E%25E7%258E%25B0%25E7%2582%25B9%25E5%2587%25BB%25E7%25AC%25AC%25E4%25BA%258C%25E4%25B8%25AA%25E6%258C%2589%25E9%2592%25AE%25E8%258E%25B7%25E5%258F%2596%25E7%25AC%25AC%25E4%25B8%2580%25E4%25B8%25AA%25E6%258C%2589%25E9%2592%25AE%25E7%259A%2584%25E9%25A2%259C%25E8%2589%25B2&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-7-107800161.nonecase
+//antd TreeSelect树选择的使用
+https://blog.csdn.net/lily_miao/article/details/82734274
+//【入门】无插件web直播解决方案，ffmpeg+nginx-http-flv-module+flv.js
+https://blog.csdn.net/string_kai/article/details/100598268

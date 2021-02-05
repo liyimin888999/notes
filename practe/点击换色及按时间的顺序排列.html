@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="addImg">
+  <button style="background-color: pink;">按钮</button>
+  <button>按钮</button>
+  <button>按钮</button>
+  <button>按钮</button>
+  <button>按钮</button>
+  <button>按钮</button>
+</div>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+  $('#addImg').bind('click').click(function () {
+    var btns = document.getElementsByTagName('button');
+    for (var i = 0; i < btns.length; i++) {
+      // console.log(btns[i])
+      btns[i].onclick=function () {
+        // console.log(i);
+        for (var j=0;j<btns.length;j++){
+          console.log(btns[j])
+            btns[j].style.backgroundColor='';
+        }
+        this.style.backgroundColor='pink';
+      }
+    }
+  })
+  // 用jquery点击第一个变色，再点击另外一个也变色，但原来的变回原色
+  // $('.meet ul').bind('click', function(){
+  //   $('.clckCgroup').removeClass('clckCgroup');
+  //   $(this).addClass('clckCgroup');
+  // }) 
+  // var ulEle = document.getElementsByClassName("meet")[0];
+  // console.log(ulEle)
+  // var btns = ulEle.children;
+  // 执行场景接口：http://[ip]/host/scenes/[scene_id]/execute
+  function set() {
+	var postData = {
+		keyword : $("#keyword").val(),
+		kaisiNendo : $("#kaisiNendo").val(),
+		gyoumu : $("#gyoumu").val(),
+	}
+	$.ajax({
+		url : "http://192.168.0.12:10003/host/scenes",
+		dataType : "json",
+		async : false,
+		type : "post",
+		data : postData
+		}.done(function(result) {
+      sofia.ui.applyDropDownList('gyousyu', result.list)
+    })
+	)
+}
+var date = "发布时间bai:2013-03-14,发布时间:2013-12-14,发布时间:2013-01-14";
+var getList = date.split(',');
+console.log(getList )
+getList.sort();
+for(var i = 0; i < getList.length; i++ ){
+  document.write(getList[i]);
+ }
+// // 把时间戳格式转化为时间格式
+// Date.prototype.Format = function(fmt) { // author: meizz
+// 	var o = {
+// 		"M+" : this.getMonth() + 1, // 月份
+// 		"d+" : this.getDate(), // 日
+// 		"H+" : this.getHours(), // 小时
+// 		"m+" : this.getMinutes(), // 分
+// 		"s+" : this.getSeconds(), // 秒
+// 		"q+" : Math.floor((this.getMonth() + 3) / 3), // 季度
+// 		"S" : this.getMilliseconds()// 毫秒
+// 	};
+// 	if (/(y+)/.test(fmt))
+// 		fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "")
+// 				.substr(4 - RegExp.$1.length));
+// 	for ( var k in o)
+// 		if (new RegExp("(" + k + ")").test(fmt))
+// 			fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k])
+// 					: (("00" + o[k]).substr(("" + o[k]).length)));
+// 	return fmt;
+// };
+// function parseISO8601(dateStringInRange) {
+// 	var isoExp = /^\s*(\d{4})-(\d\d)-(\d\d)\s(\d\d):(\d\d)\s*$/, date = new Date(
+// 			NaN), month, hour, min, parts = isoExp.exec(dateStringInRange);
+// 	if (parts) {
+// 		month = +parts[2];
+// 		hour = +parts[4];
+// 		min = +parts[5];
+// 		date.setFullYear(parts[1], month - 1, parts[3]);
+// 		date.setHours(hour, min, 0, 0);
+// 		if (month != date.getMonth() + 1) {
+// 			date.setTime(NaN);
+// 		}
+// 	}
+// 	return date;
+// }
+// function isValidDate(d) {
+// 	if (Object.prototype.toString.call(d) !== "[object Date]")
+// 		return false;
+// 	return !isNaN(d.getTime());
+// }
+// createAt = new Date(itemChildren.createAt).Format("yyyy-MM-dd HH:mm:ss");
+//               // console.log(createAt)
+</script>
+</body>
+</html>

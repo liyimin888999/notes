@@ -1,0 +1,121 @@
+<style type="text/css">
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body,html{
+    width: 100%;
+  }
+  nav{
+    /*calc()可以传两个参数  % - px其他像素值  自适应的写法
+     赋值运算符 前后 记得要给它加上空格
+     */
+    width: calc(100% - 60px);
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    padding: 0 30px;
+    background-color: #2dbb55;
+  }
+  ul{
+    list-style: none;
+  }
+  ul > li{
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    padding: 0 20px;
+  }
+  ol{
+    position: absolute;
+    width: 100px;
+    left: 0px;
+    display: none;
+  }
+  ol>li{
+    background-color: #11a13a;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .li_active{
+    background-color: #11a13a;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <ul>
+    <!--<li>
+      首页
+    </li>
+    <li >
+      跟团游
+      <ol>
+        <li>境内跟团</li>
+        <li>国内跟团</li>
+        <li>周边跟团</li>
+      </ol>
+    </li>
+    <li>
+      自助游
+    </li>
+    <li>
+      游轮
+    </li>-->
+  </ul>
+</nav>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+//children只能找到子节点
+//console.log($('ul').children('li'))
+$.ajax({
+  type:"get",
+  url:"data.json",
+  async:true,
+  success:function (res) {
+    console.log(res);
+    var str = '';//用来拼接  html数据
+    for(var i=0;i<res.length;i++){
+      //res[i].title //首页  跟团游。。
+      //undefined   false
+      //数组  隐式转换 true
+      var str1 = '';//接收  ol的html字符
+      //为什么 str1写在里面  每次的ol都是不一样的  html内容
+      if(res[i].area){
+        //也是要一个for循环
+        for(var j=0;j<res[i].area.length;j++){
+          str1 += '<li>'+res[i].area[j]+'</li>'
+        }
+        
+        str1 = '<ol>'+str1+'</ol>';
+        //console.log(str1);
+      }
+      
+      
+      str += '<li>'+res[i].title+str1+'</li>'
+    }
+    
+    $('ul').append(str);
+    
+    init();
+    
+    
+  }
+});
+
+function init () {
+  //一开始就立马去执行这段代码  但是  html节点并没有生成
+  $('ul').children('li').hover(function () {
+    //console.log(this)//this dom对象
+    $(this).children('ol').show();
+    $(this).addClass('li_active').siblings('li').removeClass('li_active');
+  },function () {
+    $(this).children('ol').hide();
+    $(this).removeClass('li_active')
+  })
+}
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<style>
+  .clckClass{color:red;}
+</style>
+<body>
+  <ul>
+    <li><a onclick="show();"><b>a[0]<b><a></li>
+    <li><a onclick="show();"><b>a[1]<b><a></li>
+    <li><a onclick="show();"><b>a[2]<b><a></li>
+  </ul>
+  <script type="text/javascript">
+    
+    function show() {
+      var removeClassA = $('ul li a.clckClass');
+      $('ul li a').bind('click', function(){
+        removeClassA .removeClass('clckClass'); 
+        $(this).addClass('clckClass'); 
+        removeClassA  = $(this);
+      });
+    }
+    show();
+    </script>
+</body>
+</html>

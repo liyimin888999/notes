@@ -1,0 +1,107 @@
+//系统场景模块css样式
+* {
+  margin: 0;
+  padding: 0;
+}
+.ant-card-body {
+  padding: 0;
+}
+ul,ol {
+  list-style: none;
+}
+.lym-Scenario {
+  background-color: #dedede;
+  // 头部css样式代码
+  .lym-Scenario-header {
+    float: left;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    background-color: white;
+    border-bottom: 2px solid #dedede;
+    span {
+      margin: 0;
+      color: black;
+      font-size: 18px;
+    }
+  }
+  // 内容部分css样式代码
+  .lym-Scenario-conent {
+    width: 98%;
+    height: 914px;
+    margin: auto;
+    .btn {
+      width: 80px;
+      height: 40px;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      background-color: #ff9900;
+      span {
+        color: white;
+        font-size: 18px;
+      }
+    }
+    .meet {
+      float: left;
+      width: 100%;
+      height: 764px;
+      border: none;
+      background-color: #dedede;
+      .meet-ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+        .ul {
+          width: 19%;
+          height: 100px;
+          border-radius: 10px;
+          margin-right: 16px;
+          padding: 0;
+          border: 1px solid #dedede;
+          margin-bottom: 1.2%;
+          margin-right: 1.2%;
+          background-color: white;
+          .one {
+            float: left;
+            width: 30%;
+            height: 100px;
+            p {
+              float: right;
+              width: 80%;
+              height: 80px;
+              background-color: #ff9900;
+              margin: 10% 0;
+            }
+          }
+          .two {
+            float: left;
+            width: 55%;
+            height: 100px;
+            padding: 10% 10px;
+            p {
+              margin: 0;
+            }
+          }
+          .three {
+            float: left;
+            width: 15%;
+            height: 100px;
+            p {
+              float: left;
+              width: 60%;
+              height: 80px;
+              background-color: #ff9900;
+              margin: 21% 0;
+            }
+          }
+        }
+        .ul:nth-child(5){
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

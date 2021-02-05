@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+  <p><input type="text" id="userName" placeholder="请输入用户名"/></p>
+  <p><input type="text" id="password" placeholder="请输入密码"/></p>
+  <input type="button" id="btn" value="点击提交">
+</body>
+
+<script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+  $("#btn").bind("click", function () {
+    $.ajax({
+    	//向后台请求数据的方式
+        type: 'POST',
+        //请求后台的地址可以简写
+        url: "http://192.168.0.12:10003/host/api/login",
+        contentType: "application/json",
+        // data: {
+        //     "userName": $("#userName").val(),
+        //     "password": $("#password").val(),
+        // },
+        data: JSON.stringify({ "userName": $("#userName").val(), "password": $("#password").val()}),
+        //成功调用后台方法后的回调函数
+        success: function () {
+            alert('success');
+        },
+    });
+});
+</script>
+</html>
